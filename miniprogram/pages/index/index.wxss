@@ -2,13 +2,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
+  align-items: center; /* 使子元素水平居中 */
 }
 
 .upload-area {
   width: 100%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 使子元素水平居中 */
 }
 
 .upload-title {
@@ -24,7 +28,7 @@
 }
 
 .image-item {
-  width: calc(33.33% - 10px);
+  width: 100px;
   height: 100px;
   margin: 5px;
   position: relative;
@@ -36,6 +40,7 @@
 .image-item image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .add-btn {
@@ -57,13 +62,13 @@
 
 .submit-btn {
   margin-top: 20px;
-  background-color: #07c160;
-  color: white;
+  background-color: #02b659;
+  color: rgb(255, 255, 255);
 }
 
 .submit-btn[disabled] {
   background-color: #a2a9b0;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* Recording indicator style */
