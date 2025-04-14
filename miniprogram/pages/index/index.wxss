@@ -16,7 +16,6 @@
 }
 
 .upload-title {
-  background-color: rgb(0, 255, 136);
   font-size: 18px;
   color: #000000;
   margin-bottom: 10px;
@@ -69,7 +68,7 @@
 
 .submit-btn[disabled] {
   background-color: #a2a9b0;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* Recording indicator style */
