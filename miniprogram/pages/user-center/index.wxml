@@ -1,0 +1,24 @@
+<!-- pages/user-center/index.wxml -->
+<view class="container">
+  <view class="user-info" wx:if="{{userInfo}}">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="stat-value">{{homeworkStats.total}}</text>
+      <text class="stat-label">总作业数</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{homeworkStats.text}}</text>
+      <text class="stat-label">文字作业</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{homeworkStats.voice}}</text>
+      <text class="stat-label">语音作业</text>
+    </view>
+  </view>
+
+  <button class="view-history-btn" bindtap="viewHomeworkHistory">查看历史作业</button>
+</view>

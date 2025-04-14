@@ -1,0 +1,27 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="upload-area">
+    <view class="upload-title">选择图片（最多9张）</view>
+    <view class="image-list">
+      <block wx:for="{{imageList}}" wx:key="*this">
+        <view class="image-item">
+          <image src="{{item}}" mode="aspectFill"></image>
+          <icon class="delete-icon" type="clear" size="20" bindtap="deleteImage" data-index="{{index}}"/>
+        </view>
+      </block>
+      <view class="image-item add-btn" wx:if="{{imageList.length < 9}}" bindtap="chooseImage">
+        <icon type="add" size="30" color="#999"/>
+      </view>
+    </view>
+  </view>
+  
+  <button class="submit-btn" bindtap="submitImageHomework" disabled="{{imageList.length === 0}}">
+    提交图片作业（{{imageList.length}}/9）
+  </button>
+  
+  <view class="recording-indicator" wx:if="{{isRecording}}">
+    正在录音：{{recordTime}}秒
+    <button bindtap="stopRecord">停止录音</button>
+  </view>
+  <button class="recording-button" wx:else bindtap="startRecord">提交口语作业</button>
+</view>
